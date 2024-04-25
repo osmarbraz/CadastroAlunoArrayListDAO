@@ -49,22 +49,21 @@ public class Aluno extends Pessoa {
     
     // Retorna a Lista de Alunos(objetos)
     public ArrayList getMinhaLista() {
-        return AlunoDAO.MinhaLista;
+        return AlunoDAO.getMinhaLista();
     }
 
     // Cadastra novo aluno
     public boolean InsertAlunoBD(String nome, int idade, String curso, int fase) {
         int id = this.maiorID() + 1;
         Aluno objeto = new Aluno(id, nome, idade, curso, fase);
-        AlunoDAO.MinhaLista.add(objeto);
+        AlunoDAO.minhaLista.add(objeto);
         return true;
-
     }
 
     // Deleta um aluno especÍfico pelo seu campo ID
     public boolean DeleteAlunoBD(int id) {
         int indice = this.procuraIndice(id);
-        AlunoDAO.MinhaLista.remove(indice);
+        AlunoDAO.minhaLista.remove(indice);
         return true;
     }
 
@@ -72,15 +71,15 @@ public class Aluno extends Pessoa {
     public boolean UpdateAlunoBD(int id, String nome, int idade, String curso, int fase) {
         Aluno objeto = new Aluno(id, nome, idade, curso, fase);
         int indice = this.procuraIndice(id);
-        AlunoDAO.MinhaLista.set(indice, objeto);
+        AlunoDAO.minhaLista.set(indice, objeto);
         return true;
     }
 
     // procura o INDICE de objeto da MinhaLista que contem o ID enviado.
     private int procuraIndice(int id) {
         int indice = -1;
-        for (int i = 0; i < AlunoDAO.MinhaLista.size(); i++) {
-            if (AlunoDAO.MinhaLista.get(i).getId() == id) {
+        for (int i = 0; i < AlunoDAO.minhaLista.size(); i++) {
+            if (AlunoDAO.minhaLista.get(i).getId() == id) {
                 indice = i;
             }
         }
@@ -90,7 +89,7 @@ public class Aluno extends Pessoa {
     // carrega dados de um aluno especÍfico pelo seu ID
     public Aluno carregaAluno(int id) {
         int indice = this.procuraIndice(id);
-        return AlunoDAO.MinhaLista.get(indice);
+        return AlunoDAO.minhaLista.get(indice);
     }
     
     // retorna o maior ID da nossa base de dados

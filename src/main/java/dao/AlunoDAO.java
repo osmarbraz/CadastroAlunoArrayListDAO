@@ -8,21 +8,21 @@ import modelo.Aluno;
  */
 public class AlunoDAO {
 
-    public static ArrayList<Aluno> MinhaLista = new ArrayList<>();
+    public static ArrayList<Aluno> minhaLista = new ArrayList<>();
 
     public static ArrayList<Aluno> getMinhaLista() {
-        return MinhaLista;
+        return minhaLista;
     }
 
     public static void setMinhaLista(ArrayList<Aluno> MinhaLista) {
-        AlunoDAO.MinhaLista = MinhaLista;
+        AlunoDAO.minhaLista = MinhaLista;
     }
 
     public static int maiorID() {        
         int maiorID = 0;
-        for (int i = 0; i < MinhaLista.size(); i++) {
-            if (MinhaLista.get(i).getId() > maiorID) {
-                maiorID = MinhaLista.get(i).getId();
+        for (int i = 0; i < minhaLista.size(); i++) {
+            if (minhaLista.get(i).getId() > maiorID) {
+                maiorID = minhaLista.get(i).getId();
             }
         }
         return maiorID;        

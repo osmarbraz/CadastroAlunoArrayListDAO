@@ -178,7 +178,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
 
     private void JBAlterarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBAlterarActionPerformed
         try {
-            // recebendo e validando dados da interface gr�fica.
+            // recebendo e validando dados da interface gráfica.
             int id = 0;
             String nome = "";
             int idade = 0;
@@ -192,7 +192,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
             }
 
             if (this.JTFIdade.getText().length() <= 0) {
-                throw new Mensagens("Idade deve ser n�mero e maior que zero.");
+                throw new Mensagens("Idade deve ser número e maior que zero.");
             } else {
                 idade = Integer.parseInt(this.JTFIdade.getText());
             }
@@ -204,7 +204,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
             }
 
             if (this.JTFFase.getText().length() <= 0) {
-                throw new Mensagens("Fase deve ser n�mero e maior que zero.");
+                throw new Mensagens("Fase deve ser número e maior que zero.");
             } else {
                 fase = Integer.parseInt(this.JTFFase.getText());
             }
@@ -216,7 +216,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
             }
 
             // envia os dados para o Aluno processar
-            if (this.objetoaluno.UpdateAlunoBD(id, nome, idade, curso, fase)) {
+            if (this.objetoaluno.updateAlunoBD(id, nome, idade, curso, fase)) {
                 // limpa os campos
                 this.JTFNome.setText("");
                 this.JTFIdade.setText("");
@@ -267,7 +267,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
 
             if (respostaUsuario == 0) {// clicou em SIM
                 // envia os dados para o Aluno processar
-                if (this.objetoaluno.DeleteAlunoBD(id)) {
+                if (this.objetoaluno.deleteAlunoBD(id)) {
                     // limpa os campos
                     this.JTFNome.setText("");
                     this.JTFIdade.setText("");

@@ -53,7 +53,7 @@ public class Aluno extends Pessoa {
     }
 
     // Cadastra novo aluno
-    public boolean InsertAlunoBD(String nome, int idade, String curso, int fase) {
+    public boolean insertAlunoBD(String nome, int idade, String curso, int fase) {
         int id = this.maiorID() + 1;
         Aluno objeto = new Aluno(id, nome, idade, curso, fase);
         AlunoDAO.minhaLista.add(objeto);
@@ -61,14 +61,14 @@ public class Aluno extends Pessoa {
     }
 
     // Deleta um aluno especÍfico pelo seu campo ID
-    public boolean DeleteAlunoBD(int id) {
+    public boolean deleteAlunoBD(int id) {
         int indice = this.procuraIndice(id);
         AlunoDAO.minhaLista.remove(indice);
         return true;
     }
 
     // Edita um aluno especÍfico pelo seu campo ID
-    public boolean UpdateAlunoBD(int id, String nome, int idade, String curso, int fase) {
+    public boolean updateAlunoBD(int id, String nome, int idade, String curso, int fase) {
         Aluno objeto = new Aluno(id, nome, idade, curso, fase);
         int indice = this.procuraIndice(id);
         AlunoDAO.minhaLista.set(indice, objeto);

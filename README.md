@@ -4,7 +4,8 @@
 
  - Esta é uma versão do sistema para a IDE NetBeans.<br> 
  - O projeto no NetBeans deve ser chamado CadastroAlunoArrayListDAO.<br>
- - Este programa possui diversas classes organizada nos pacotes, principal, visao e modelo.<br>
+ - Os dados estão armazenados em memória.<br>
+ - Este programa possui diversas classes organizada nos pacotes, principal, visao, dao e modelo.<br>
  - A pasta src contêm os fontes do projeto.<br>
  - A interface gráfica foi construída **com** o auxílio da IDE NetBeans.<br>
 

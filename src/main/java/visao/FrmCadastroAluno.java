@@ -147,14 +147,14 @@ public class FrmCadastroAluno extends javax.swing.JFrame {
 
             // envia os dados para o Controlador cadastrar
             if (this.objetoaluno.insertAlunoBD(nome, idade, curso, fase)) {
-                JOptionPane.showMessageDialog(rootPane, "Aluno Cadastrado com Sucesso!");
+                JOptionPane.showMessageDialog(null, "Aluno Cadastrado com Sucesso!");
                 // limpa campos da interface
                 this.JTFNome.setText("");
                 this.JTFIdade.setText("");
                 this.JTFCurso.setText("");
                 this.JTFFase.setText("");
             }
-            //Exibie no console o aluno cadastrado
+            // Exibie no console o aluno cadastrado
             System.out.println(this.objetoaluno.getMinhaLista().toString());
 
         } catch (Mensagens erro) {
@@ -165,7 +165,7 @@ public class FrmCadastroAluno extends javax.swing.JFrame {
     }//GEN-LAST:event_JBCadastrarActionPerformed
 
     private void JBCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBCancelarActionPerformed
-        //Libera todos os recurso da interface gráfica
+        // Libera todos os recurso da interface gráfica
         this.dispose();
     }//GEN-LAST:event_JBCancelarActionPerformed
 

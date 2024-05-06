@@ -8,6 +8,7 @@
  - Este programa possui diversas classes organizada nos pacotes, principal, visao, dao e modelo.<br>
  - A pasta src contêm os fontes do projeto.<br>
  - A interface gráfica foi construída **com** o auxílio da IDE NetBeans.<br>
+ - O diagrama de classe foi construído com o https://app.diagrams.net/.<br>
 
 ### Interface gráfica
 
@@ -20,6 +21,13 @@
 ## Tela para gerenciar alunos (alterar e apagar).
 ![tela3](tela3.png)
 
+### Modelagem
+
+## Diagrama de Classes.
+![DiagramaClasse](DiagramaClasse.png)
+
 ## Arquivos
 
 - pom.xml - Arquivo de configurção da ferramenta de automação Maven.
+- DC_CadastroClienteArrayListDAO.drawio arquivo do diagrama de classes.
+- *.png - Arquivos de imagens do README.md.

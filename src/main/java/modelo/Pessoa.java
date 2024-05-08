@@ -1,5 +1,8 @@
 package modelo;
 
+/**
+ * Classe que representa uma Pessoa.
+ */
 public abstract class Pessoa {
 
     // Atributos
@@ -7,12 +10,16 @@ public abstract class Pessoa {
     private String nome;
     private int idade;
 
-    // Construtor de Objeto Vazio
+    /** 
+     * Construtor de Objeto Vazio
+     */
     public Pessoa() {
         this(0,"",0);
     }
 
-    // Construtor de Objeto com parâmetro
+    /**
+     * Construtor de Objeto com parâmetro
+     */
     public Pessoa(int id, String nome, int idade) {
         this.id = id;
         this.nome = nome;

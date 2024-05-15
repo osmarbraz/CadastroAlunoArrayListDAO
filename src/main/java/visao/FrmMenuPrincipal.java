@@ -14,7 +14,6 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form FrmTelaPrincipal
      */
-    
     public FrmMenuPrincipal() {
         initComponents();
     }
@@ -98,7 +97,7 @@ public class FrmMenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     private void jMenuItemGerenciarAlunosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemGerenciarAlunosActionPerformed
-         //Instancia a tela de gerenciar de aluno
+        //Instancia a tela de gerenciar de aluno
         FrmGerenciaAluno objeto = new FrmGerenciaAluno();
         objeto.setVisible(true);
     }//GEN-LAST:event_jMenuItemGerenciarAlunosActionPerformed

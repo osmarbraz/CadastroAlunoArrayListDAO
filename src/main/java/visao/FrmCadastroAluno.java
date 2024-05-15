@@ -132,7 +132,7 @@ public class FrmCadastroAluno extends javax.swing.JFrame {
             } else {
                 idade = Integer.parseInt(this.JTFIdade.getText());
             }
-            
+
             if (this.JTFCurso.getText().length() < 2) {
                 throw new Mensagem("Curso deve conter ao menos 2 caracteres.");
             } else {

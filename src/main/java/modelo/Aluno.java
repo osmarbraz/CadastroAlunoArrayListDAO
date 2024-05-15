@@ -21,19 +21,19 @@ public class Aluno extends Pessoa {
      * Construtor de Objeto Vazio.
      */
     public Aluno() {
-        this(0,"",0,"",0);
+        this(0, "", 0, "", 0);
     }
-    
+
     /**
      * Construtor com parâmetro.
-     * 
+     *
      * @param id Identificador do aluno.
      * @param nome Nome do aluno.
      * @param idade Idade do aluno.
      * @param curso Curso do aluno.
      * @param fase Fase do aluno.
      */
-    public Aluno( int id, String nome, int idade, String curso, int fase) {
+    public Aluno(int id, String nome, int idade, String curso, int fase) {
         super(id, nome, idade);
         this.curso = curso;
         this.fase = fase;
@@ -42,7 +42,7 @@ public class Aluno extends Pessoa {
     // Métodos GET e SET
     /**
      * Retorna o curso do aluno.
-     * 
+     *
      * @return Uma String com o nome do curso do aluno.
      */
     public String getCurso() {
@@ -51,7 +51,7 @@ public class Aluno extends Pessoa {
 
     /**
      * Modifica o curso do aluno.
-     * 
+     *
      * @param curso Uma string com o nome do curso do aluno.
      */
     public void setCurso(String curso) {
@@ -60,8 +60,8 @@ public class Aluno extends Pessoa {
 
     /**
      * Retorna a fase do aluno.
-     * 
-     * @return  Um inteiro com a fase do aluno.
+     *
+     * @return Um inteiro com a fase do aluno.
      */
     public int getFase() {
         return fase;
@@ -69,7 +69,7 @@ public class Aluno extends Pessoa {
 
     /**
      * Modifica a fase do aluno.
-     * 
+     *
      * @param fase Um int com a fase do aluno.
      */
     public void setFase(int fase) {
@@ -78,20 +78,20 @@ public class Aluno extends Pessoa {
 
     /**
      * Retorna os dados do aluno em uma string.
-     * 
+     *
      * @return Uma string com todos os dados do aluno concatenado.
      */
     @Override
     public String toString() {
         return super.toString() + "curso=" + curso + ", fase=" + fase;
     }
- 
+
     /*  ABAIXO OS MéTODOS PARA USO JUNTO COM O DAO
         SIMULANDO A ESTRUTURA EM CAMADAS PARA USAR COM BANCOS DE DADOS.
-    */    
+     */
     /**
      * Retorna a Lista de Alunos(objetos).
-     * 
+     *
      * @return Um ArrayList com todos os Alunos.
      */
     public ArrayList<Aluno> getMinhaLista() {
@@ -100,7 +100,7 @@ public class Aluno extends Pessoa {
 
     /**
      * Insere um novo aluno.
-     * 
+     *
      * @param nome O nome do aluno.
      * @param idade A idade do aluno.
      * @param curso O curso do aluno
@@ -116,7 +116,7 @@ public class Aluno extends Pessoa {
 
     /**
      * Deleta um aluno especÍfico pelo seu ID.
-     * 
+     *
      * @param id Id do aluno a ser excluído.
      * @return Verdadeiro ou falso se conseguiu fazer a exclusão.
      */
@@ -128,7 +128,7 @@ public class Aluno extends Pessoa {
 
     /**
      * Edita um aluno especÍfico pelo seu ID.
-     * 
+     *
      * @param id O id do aluno.
      * @param nome O nome do aluno.
      * @param idade A idade do aluno.
@@ -142,10 +142,10 @@ public class Aluno extends Pessoa {
         AlunoDAO.minhaLista.set(indice, objeto);
         return true;
     }
-    
+
     /**
      * Procura o INDICE de objeto da MinhaLista que contem o ID enviado.
-     * 
+     *
      * @param id O Id do aluno a ser procurado.
      * @return Um inteiro com a posição do aluno no ArrayList.
      */
@@ -158,10 +158,10 @@ public class Aluno extends Pessoa {
         }
         return indice;
     }
-    
+
     /**
      * Carrega dados de um aluno especÍfico pelo seu ID.
-     * 
+     *
      * @param id O id do aluno a ser carregado.
      * @return Um objeto aluno preenchido.
      */
@@ -169,13 +169,13 @@ public class Aluno extends Pessoa {
         int indice = this.procuraIndice(id);
         return AlunoDAO.minhaLista.get(indice);
     }
-    
+
     /**
      * Retorna o maior ID da nossa base de dados.
-     * 
+     *
      * @return Um inteiro com o maior valor de Id de aluno.
      */
-    public int maiorID(){
+    public int maiorID() {
         return AlunoDAO.maiorID();
-    }   
+    }
 }

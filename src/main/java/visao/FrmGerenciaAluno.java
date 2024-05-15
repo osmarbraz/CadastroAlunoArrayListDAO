@@ -225,7 +225,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "Aluno Alterado com Sucesso!");
 
             }
-             // Exibe no console o aluno cadastrado
+            // Exibe no console o aluno cadastrado
             System.out.println(this.objetoaluno.getMinhaLista().toString());
         } catch (Mensagem erro) {
             JOptionPane.showMessageDialog(null, erro.getMessage());
@@ -233,7 +233,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Informe um número válido.");
         } finally {
             // atualiza a tabela.
-            carregaTabela(); 
+            carregaTabela();
         }
     }//GEN-LAST:event_JBAlterarActionPerformed
 
@@ -285,7 +285,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
             carregaTabela();
         }
     }//GEN-LAST:event_JBApagarActionPerformed
-        
+
     public void carregaTabela() {
         DefaultTableModel modelo = (DefaultTableModel) this.JTableAlunos.getModel();
         modelo.setNumRows(0); // Posiciona na primeira linha da tabela
@@ -333,7 +333,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
                 new FrmGerenciaAluno().setVisible(true);
             }
         });
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

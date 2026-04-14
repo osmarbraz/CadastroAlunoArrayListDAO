@@ -4,7 +4,7 @@ import dao.AlunoDAO;
 import java.util.ArrayList;
 
 /**
- * Classe que representa uma Aluno.
+ * Classe que representa um Aluno.
  */
 public class Aluno extends Pessoa {
 

@@ -1,13 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package visao;
 
 /**
- *
- * @author ricas
+ * Interface gráfica para o menu principal.
  */
 public class FrmMenuPrincipal extends javax.swing.JFrame {
 

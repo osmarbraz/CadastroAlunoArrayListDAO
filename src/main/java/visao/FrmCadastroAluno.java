@@ -3,6 +3,9 @@ package visao;
 import modelo.Aluno;
 import javax.swing.JOptionPane;
 
+/**
+ * Interface gráfica para o cadastro de aluno.
+ */
 public class FrmCadastroAluno extends javax.swing.JFrame {
 
     private Aluno objetoaluno; // cria o vínculo com o Aluno

@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+/**
+ * Interface gráfica para gerenciar aluno.
+ */
 public class FrmGerenciaAluno extends javax.swing.JFrame {
 
     //cria o vínculo com o objetoaluno

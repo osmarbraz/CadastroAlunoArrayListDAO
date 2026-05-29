@@ -36,7 +36,7 @@ public class AlunoDAO {
      *
      * @return Um id com o maior id de aluno.
      */
-    public static int maiorID() {
+    public static int maiorId() {
         int maiorID = 0;
         for (int i = 0; i < minhaLista.size(); i++) {
             if (minhaLista.get(i).getId() > maiorID) {

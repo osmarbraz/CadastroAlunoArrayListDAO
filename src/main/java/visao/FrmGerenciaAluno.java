@@ -219,7 +219,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
             }
 
             // envia os dados para o Aluno processar
-            if (this.objetoaluno.updateAlunoBD(id, nome, idade, curso, fase)) {
+            if (this.objetoaluno.atualizarAlunoBD(id, nome, idade, curso, fase)) {
                 // limpa os campos
                 this.JTFNome.setText("");
                 this.JTFIdade.setText("");
@@ -270,7 +270,7 @@ public class FrmGerenciaAluno extends javax.swing.JFrame {
 
             if (respostaUsuario == 0) {// clicou em SIM
                 // envia os dados para o Aluno processar
-                if (this.objetoaluno.deleteAlunoBD(id)) {
+                if (this.objetoaluno.apagarAlunoBD(id)) {
                     // limpa os campos
                     this.JTFNome.setText("");
                     this.JTFIdade.setText("");

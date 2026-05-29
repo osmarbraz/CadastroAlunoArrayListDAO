@@ -107,8 +107,8 @@ public class Aluno extends Pessoa {
      * @param fase A fase do aluno.
      * @return Verdadeiro ou falso se conseguiu fazer a inclusão.
      */
-    public boolean insertAlunoBD(String nome, int idade, String curso, int fase) {
-        int id = this.maiorID() + 1;
+    public boolean inserirAlunoBD(String nome, int idade, String curso, int fase) {
+        int id = this.maiorId() + 1;
         Aluno objeto = new Aluno(id, nome, idade, curso, fase);
         AlunoDAO.minhaLista.add(objeto);
         return true;
@@ -120,8 +120,8 @@ public class Aluno extends Pessoa {
      * @param id Id do aluno a ser excluído.
      * @return Verdadeiro ou falso se conseguiu fazer a exclusão.
      */
-    public boolean deleteAlunoBD(int id) {
-        int indice = this.procuraIndice(id);
+    public boolean apagarAlunoBD(int id) {
+        int indice = this.procurarIndice(id);
         AlunoDAO.minhaLista.remove(indice);
         return true;
     }
@@ -136,9 +136,9 @@ public class Aluno extends Pessoa {
      * @param fase A fase do aluno.
      * @return Verdadeiro ou falso se conseguiu fazer a inclusão.
      */
-    public boolean updateAlunoBD(int id, String nome, int idade, String curso, int fase) {
+    public boolean atualizarAlunoBD(int id, String nome, int idade, String curso, int fase) {
         Aluno objeto = new Aluno(id, nome, idade, curso, fase);
-        int indice = this.procuraIndice(id);
+        int indice = this.procurarIndice(id);
         AlunoDAO.minhaLista.set(indice, objeto);
         return true;
     }
@@ -149,7 +149,7 @@ public class Aluno extends Pessoa {
      * @param id O Id do aluno a ser procurado.
      * @return Um inteiro com a posição do aluno no ArrayList.
      */
-    private int procuraIndice(int id) {
+    private int procurarIndice(int id) {
         int indice = -1;
         for (int i = 0; i < AlunoDAO.minhaLista.size(); i++) {
             if (AlunoDAO.minhaLista.get(i).getId() == id) {
@@ -165,8 +165,8 @@ public class Aluno extends Pessoa {
      * @param id O id do aluno a ser carregado.
      * @return Um objeto aluno preenchido.
      */
-    public Aluno carregaAluno(int id) {
-        int indice = this.procuraIndice(id);
+    public Aluno carregarAluno(int id) {
+        int indice = this.procurarIndice(id);
         return AlunoDAO.minhaLista.get(indice);
     }
 
@@ -175,7 +175,7 @@ public class Aluno extends Pessoa {
      *
      * @return Um inteiro com o maior valor de Id de aluno.
      */
-    public int maiorID() {
-        return AlunoDAO.maiorID();
+    public int maiorId() {
+        return AlunoDAO.maiorId();
     }
 }
